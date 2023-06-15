@@ -12,6 +12,6 @@ interface MainRepository {
     suspend fun getDishes():DataStateTest<DishesDTO>
     suspend fun insertDish(dishEntity: DishEntity)
     suspend fun deleteDish(dishEntity: DishEntity)
-    suspend fun getDishesLocally(): Flow<List<DishEntity>>
+    fun getDishesLocally(): Flow<List<DishEntity>>
 
 }

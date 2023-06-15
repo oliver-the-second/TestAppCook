@@ -24,7 +24,6 @@ class ViewDialog {
         dishPrice: String,
         dishMass: String,
         dishDescription: String,
-        onClose:()->Unit,
         onAddToBasket:()->Unit,
     ) {
         val dialog = Dialog(activity!!)
@@ -34,14 +33,14 @@ class ViewDialog {
 
         dialog.setContentView(R.layout.dish_information_dialog)
 
-        val dishNameTextView = dialog.findViewById<View>(R.id.dishNameDishInformation) as TextView
-        val dishPicImageView = dialog.findViewById<View>(R.id.dishItemImageView) as ImageView
-        val dishPriceTextView = dialog.findViewById<View>(R.id.dishPriceDishInformation) as TextView
-        val dishMassTextView = dialog.findViewById<View>(R.id.dishMassDishInformation) as TextView
-        val dishDescriptionTextView = dialog.findViewById<View>(R.id.dishDescriptionDishInformation) as TextView
-        val addToBasketButton =  dialog.findViewById<View>(R.id.addToBaskerButtonDishInformation) as Button
-        val icFavorite =  dialog.findViewById<View>(R.id.icFavoriteDishInformation) as View
-        val icClose =  dialog.findViewById<View>(R.id.icCloseDishInformation) as View
+        val dishNameTextView = dialog.findViewById(R.id.dishNameDishInformation) as TextView
+        val dishPicImageView = dialog.findViewById(R.id.dishItemImageView) as ImageView
+        val dishPriceTextView = dialog.findViewById(R.id.dishPriceDishInformation) as TextView
+        val dishMassTextView = dialog.findViewById(R.id.dishMassDishInformation) as TextView
+        val dishDescriptionTextView = dialog.findViewById(R.id.dishDescriptionDishInformation) as TextView
+        val addToBasketButton =  dialog.findViewById(R.id.addToBaskerButtonDishInformation) as Button
+        val icFavorite =  dialog.findViewById(R.id.icFavoriteDishInformation) as View
+        val icClose =  dialog.findViewById(R.id.icCloseDishInformation) as View
         dishPriceTextView.text = dishPrice
         dishMassTextView.text = dishMass
         dishDescriptionTextView.text = dishDescription
@@ -55,16 +54,12 @@ class ViewDialog {
         }
         addToBasketButton.setOnClickListener{
             onAddToBasket()
+            dialog.hide()
         }
-        icFavorite.setOnClickListener {
-
-        }
+        icFavorite.setOnClickListener {}
         icClose.setOnClickListener{
             dialog.hide()
-            //onClose()
         }
-        /*val dialogButton = dialog.findViewById<View>(R.id.btn_dialog) as Button
-        dialogButton.setOnClickListener { dialog.dismiss() }*/
         dialog.show()
     }
 }

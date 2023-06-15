@@ -106,9 +106,6 @@ class CategoryDetailsFragment : Fragment() {
                                 dishPrice = price.toString() + " ₽",
                                 dishMass = weight.toString() + " г",
                                 dishDescription = description.toString(),
-                                onClose = {
-
-                                },
                                 onAddToBasket = {
                                     vm.onEvent(CategoryDetailsEvent.OnAddToBasketClick(holder.item))
                                 }

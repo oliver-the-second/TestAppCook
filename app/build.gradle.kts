@@ -53,6 +53,7 @@ dependencies {
     implementation(project(":feature:mainscreen"))
     implementation(project(":feature:search"))
     implementation(project(":feature:account"))
+    implementation(project(":shared"))
 
 
 }

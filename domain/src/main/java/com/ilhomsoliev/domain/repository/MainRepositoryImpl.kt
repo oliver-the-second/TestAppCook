@@ -28,7 +28,7 @@ class MainRepositoryImpl(private val webSource: WebSource, private val dishDao: 
         dishDao.delete(dish)
     }
 
-    override suspend fun getDishesLocally(): Flow<List<DishEntity>> = dishDao.getDishes()
+    override fun getDishesLocally(): Flow<List<DishEntity>> = dishDao.getDishes()
 
 
 }

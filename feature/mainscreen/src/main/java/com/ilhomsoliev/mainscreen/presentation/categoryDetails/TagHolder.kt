@@ -25,11 +25,11 @@ class TagHolder(
         ViewCompat.setTransitionName(tagItemNameTextView, "${item}title")
         tagItemNameTextView.text = item.name
         if(item.isActive){
-            tagItemCardView.background =  ContextCompat.getDrawable(this.root.context, R.drawable.active_tag_item_background)
-            tagItemNameTextView.setTextColor(ContextCompat.getColor(this.root.context, R.color.white))
+            tagItemCardView.background =  ContextCompat.getDrawable(this.root.context, com.ilhomsoliev.testappcook.shared.R.drawable.active_tag_item_background)
+            tagItemNameTextView.setTextColor(ContextCompat.getColor(this.root.context, com.ilhomsoliev.testappcook.shared.R.color.white))
         }else {
-            tagItemCardView.background =  ContextCompat.getDrawable(this.root.context, R.drawable.inactive_tag_item_background)
-            tagItemNameTextView.setTextColor(ContextCompat.getColor(this.root.context, R.color.black))
+            tagItemCardView.background =  ContextCompat.getDrawable(this.root.context, com.ilhomsoliev.testappcook.shared.R.drawable.active_tag_item_background)
+            tagItemNameTextView.setTextColor(ContextCompat.getColor(this.root.context, com.ilhomsoliev.testappcook.shared.R.color.black))
         }
     }
 

@@ -11,9 +11,9 @@
 
     <ImageView
         android:id="@+id/imageViewCategoryItem"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="148dp"
-        android:scaleType="center"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

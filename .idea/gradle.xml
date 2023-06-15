@@ -20,6 +20,7 @@
             <option value="$PROJECT_DIR$/feature/basket" />
             <option value="$PROJECT_DIR$/feature/mainscreen" />
             <option value="$PROJECT_DIR$/feature/search" />
+            <option value="$PROJECT_DIR$/shared" />
           </set>
         </option>
       </GradleProjectSettings>

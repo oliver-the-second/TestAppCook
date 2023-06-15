@@ -2,6 +2,7 @@ package com.ilhomsoliev.testappcook
 
 import android.app.Application
 import androidx.room.Room
+import com.ilhomsoliev.basket.viewmodel.BasketViewModel
 import com.ilhomsoliev.data.local.dao.DishDao
 import com.ilhomsoliev.data.local.db.ApplicationDatabase
 import com.ilhomsoliev.data.remote.MainRepository
@@ -42,6 +43,9 @@ class CookApplication: Application() {
             }
             viewModel{
                 CategoryDetailsViewModel(get(), get())
+            }
+            viewModel {
+                BasketViewModel(get())
             }
             single<ApplicationDatabase>{
                 Room.databaseBuilder(this@CookApplication, ApplicationDatabase::class.java, "cook_database")

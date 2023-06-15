@@ -9,6 +9,6 @@ dependencies {
     androidBase(false)
     implementation(project(":domain"))
     implementation(project(":core"))
-
+    implementation(project(":shared"))
 
 }
